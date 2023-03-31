@@ -1,0 +1,85 @@
+@mixin fontface($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg) {
+	$src: null;
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+	}
+}
+
+@mixin text{
+	font-size: 15px;
+	line-height: 24px;
+	font-weight: 400px;
+}
+
+@mixin title{
+    font-family: "Georgia";
+    font-size: 44px;
+    line-height: 57px;
+    font-weight: 400;
+    color: $text-color-text;
+    margin: 0;
+}
+
+@mixin heading{
+    font-family: "Georgia";
+    font-size: 35px;
+    line-height: 46px;
+    font-weight: 400;
+    color: $text-color-title;
+    letter-spacing: 0.06em;
+}
+
+@mixin button{
+    display: block;
+    width: fit-content;
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 22px;
+    letter-spacing: 0.06em;
+    color: $text-color-dark;
+    text-decoration: none;
+    padding: 15px 45px;
+    background-color: $bg-color-button;
+    border-radius: 100px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.5s ease-in-out;
+}
+
+@mixin text-description{
+    font-family: "Georgia";
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 23px;
+    letter-spacing: 0.06em;
+    color: $text-color-title;
+    text-align: center;
+}
+
+@mixin icon{
+    content: "";
+    display: block;
+    position: absolute;
+    width: 40px;
+    height: 26px;
+    background-size: cover;
+    bottom: 0;
+    left: 0;  
+}

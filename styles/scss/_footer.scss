@@ -1,0 +1,102 @@
+.footer{
+    background-image: url(../../assets/images/footer-gradient-background.svg);
+    background-size: cover;
+}
+
+.contacts{
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+
+    &__item{
+        max-width: 279px;
+        display: flex;
+        flex-direction: column;
+
+        &--center{
+            margin: 0 160px;
+            max-width: 302px;
+        }
+    }
+
+    &__title{
+        @include heading;
+        color: $text-color-text;
+        margin: 0;
+    }
+
+    &__mail, &__phone, &__address{
+        display: block;
+        position: relative;
+        @include text-description;
+        font-style: normal;
+        padding-top: 43px;
+        padding-left: 60px;
+        text-align: left;
+        color: $text-color-secondary;
+        text-decoration: none;
+    }
+
+    &__mail{
+         &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 40px;
+            height: 26px;
+            background-image: url(../../assets/icons/mail.svg);
+            background-size: contain;
+            bottom: 0;
+            left: 0;
+        }
+    }
+
+    &__phone{
+        padding-top: 49px;
+
+        &:before{
+            @include icon;
+            background-image: url(../../assets/icons/phone.svg);
+            height: 32px;
+        }
+    }
+
+    &__address{
+        padding-left: 42px;
+
+
+        &--top{
+            padding-top: 34px;
+
+            &:before{
+                @include icon;
+                background-image: url(../../assets/icons/pin.svg);
+                width: 22px;
+                height: 32px;
+                bottom: 8px;
+            }
+        }
+        
+        &--bottom{
+            padding-top: 37px;
+
+            &:before{
+                @include icon;
+                background-image: url(../../assets/icons/pin.svg);
+                width: 22px;
+                height: 32px;
+            }
+        }
+    }
+
+    &__link{
+        text-decoration: none;
+        color: $text-color-secondary;
+    }
+    &__image{
+        background-image: url(../../assets/images/footer-puppy.svg);
+        background-size: cover;
+        width: 300px;
+        height: 310px;
+    }
+}

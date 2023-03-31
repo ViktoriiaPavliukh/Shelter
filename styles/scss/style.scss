@@ -1,0 +1,358 @@
+@import "_variables";
+@import "_mixins";
+@import "_fonts";
+
+
+* {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+body{
+    font-family: "Arial";
+    font-weight: 400;
+}
+
+.container{
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 0 40px;
+}
+
+.background{
+   background-image: url(../../assets/images/start-screen-gradient-background.png);
+   background-repeat: no-repeat;
+   background-size: cover;
+}
+
+@import "_header";
+
+.offer{
+    padding-top: 60px;
+    display: flex;
+    justify-content: space-between;
+
+    &__text{
+        padding-top: 163px;
+        display: flex;
+        flex-direction: column;
+        justify-content: left;
+    }
+
+    &__title{
+        @include title;
+    }
+
+    &__subtitle{
+        @include text;
+        margin: 0;
+        padding-top: 42px;
+        color: $text-color-primary;
+    }
+    &__image{
+        max-width: 100%;
+        padding-left: 42px
+    }
+
+    &__button{
+        @include button;
+        width: fit-content;
+        margin-top: 42px;
+
+        &:hover{
+            background-color: #FDDCC4;
+        }
+    }
+}
+
+.info{
+    display: flex;
+    justify-content: center;
+    padding-top: 80px;
+    padding-bottom: 100px;
+
+    &__image{
+        padding-left: 175px;
+    }
+
+    &__text{
+        padding-left: 120px;
+    }
+
+    &__title{
+        @include title;
+        padding-top: 14px;
+        color: $text-color-title;
+        letter-spacing: 0.06em;
+    }
+
+    &__content{
+        @include text;
+        max-width: 430px;
+        margin: 0;
+        padding-top: 25px;
+        color: $text-color-content;
+    }
+}
+.our-friends{
+    background-color: $bg-color-light;
+    padding-bottom: 100px;
+
+    &__title{
+        @include heading;
+        text-align: center;
+        padding-top: 80px;
+        margin: 0;
+    }
+
+    &__button{
+        @include button;
+        display: flex;
+        margin: 0 auto;
+        text-decoration: none;
+
+        &:hover{
+            background-color: #FDDCC4;
+        }
+    }
+}
+
+.cards{
+    padding-top: 60px;
+    margin-bottom: 60px;
+    display: flex;
+    justify-content: center;
+
+    &__control{
+        display: block;
+        margin: auto;
+        position: relative;
+        @include text-description;
+        width: 52px;
+        height: 52px;
+        border-radius: 50%;
+        border: 2px solid transparent;
+        background-color: transparent;
+        color: $text-color-dark;
+        cursor: pointer;
+        transition: all 1s ease-in-out;
+        justify-content: center;
+        align-items: center;
+
+        &--left{
+            margin-left: 0;
+            margin-right: 50px;
+
+            &::before{
+                @include icon;
+                background-image: url(../../assets/icons/arrow-left.svg);
+                width: 14px;
+                height: 6px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+         &--right{
+            margin-left: 50px;
+            margin-right: 0;
+
+
+            &::before{
+                @include icon;
+                background-image: url(../../assets/icons/arrow-right.svg);
+                width: 14px;
+                height: 6px;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+            }
+        }
+
+        &--left, &--right{
+            border-color:$bg-color-button;
+        }
+
+        &:hover{
+            background-color: #FDDCC4;
+            border-color: #FDDCC4;
+            color: $text-color-dark;
+        }
+    }    
+    &__item{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        max-width: 270px;
+        border-radius: 9px;
+        background-color: #FAFAFA;
+        cursor: pointer;
+        transition: all 1s ease-in-out;
+        
+
+        &:hover{
+            background-color: #FFFFFF;
+        }
+
+        &--centered{
+            margin: 0 90px;
+        }  
+    }
+
+    &__title{
+        font-family: "Georgia";
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 400;
+        color: $text-color-title;
+        letter-spacing: 0.06em;
+        padding-top: 30px;
+    }
+
+     &__button{
+        @include button;
+        background-color: transparent;
+        border: 1px solid $bg-color-button;
+        margin: 30px 0;
+
+        &:hover{
+            background-color: #FDDCC4;
+            border-color: #FDDCC4;
+        }
+    }
+}
+
+.help{
+    padding-bottom: 100px;
+
+    &__title{
+        @include heading;
+        text-align: center;
+        margin: 0;
+        padding-top: 80px;
+        margin-bottom: 5px;
+    }
+
+    &__items{
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+    }
+
+    &__item{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        padding-top: 55px;
+        margin-left: 120px;
+        width: fit-content;
+
+        &--start{
+            margin-left: 87px;
+        }
+        &--vitamins{
+            margin-left: 185px;
+        }
+    }
+
+    &__image{
+        margin: 0 auto;
+    }
+
+    &__description{
+        @include text-description;    
+        margin: 0;    
+        padding-top: 30px;
+    }
+}
+.in-addition{
+    background-color: $bg-color-light;
+    padding-bottom: 100px;
+}
+
+.donation{
+    padding-top: 91px;
+    display: flex;
+    justify-content: center;
+
+    &__image{
+        max-width: 505px;
+    }
+
+    &__action{
+        margin-left: 30px;
+    }
+
+    &__title{
+        @include heading;
+        margin: 0;
+    }
+
+    &__subtitle{
+        margin: 0;
+        padding: 20px 0;
+        font-size: 15px;
+        font-family: "Georgia";
+        line-height: 17px;
+        font-weight: 400;
+        color: $text-color-title;
+        letter-spacing: 0.06em;
+    }
+
+    &__form{
+        display: block;
+        position: relative;
+        background-color: $bg-color-button;
+        border-radius: 9px;
+        margin: 0;
+        padding: 10px 0 10px 60px;
+        max-width: 349px;
+     
+
+        &:before{
+            content: "";
+            display: block;
+            position: absolute;
+            width: 30px;
+            height: 23px;
+            background-image: url(../../assets/icons/credit-card.svg);
+            background-size: contain;
+            top: 10px;
+            left: 15px;
+        }
+    }
+
+    &__link{
+        font-family: "Georgia";
+        font-size: 20px;
+        line-height: 23px;
+        font-weight: 400;
+        background-color: transparent;
+        border: none;
+        letter-spacing: 0.06em;
+        outline: none;
+        color: $text-color-title;
+        text-decoration: none;
+    }
+
+    &__text{
+        font-family: "Arial";
+        font-style: italic;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 18px;
+        color: #B2B2B2;
+        max-width: 380px;
+        margin: 0;
+        padding-top: 20px;
+
+    }
+}
+
+@import "_footer";
+@import "_pets";
+
+
+
+
