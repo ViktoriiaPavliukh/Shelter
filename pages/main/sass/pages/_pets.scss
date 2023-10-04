@@ -1,0 +1,142 @@
+.swiper-container {
+  padding-top: 59px;
+}
+
+.pets {
+  padding: 81px 0 100px;
+  background: $color-light-l;
+
+  &__title {
+    text-align: center;
+    margin-left: 3px;
+  }
+
+  &__catalog {
+    // display: grid;
+    // grid-template: 1fr / 1fr 1fr 1fr;
+    // column-gap: 90px;
+    width: 990px;
+    // padding-bottom: 60px;
+    // padding-top: 58px;
+
+    &-card {
+      cursor: pointer;
+      border-radius: 9px;
+      overflow: hidden;
+      background: $color-light-s;
+      row-gap: 29px;
+      @include flex(center, center, column);
+
+      &:hover {
+        background: $color-light-xl;
+        box-shadow: 0px 2px 35px 14px rgba(13, 13, 13, 0.04);
+      }
+    }
+
+    &-nav-left,
+    &-nav-right {
+      border: 2px solid $main-color;
+      border-radius: 50%;
+      position: absolute;
+
+      img {
+        padding: 20px 17px;
+      }
+
+      &:hover {
+        background: $main-color;
+        cursor: pointer;
+      }
+    }
+
+    &-nav-left,
+    &-nav-right {
+      top: 52%;
+      width: 52px;
+      height: 52px;
+
+      &::after {
+        content: unset;
+      }
+    }
+
+    &-nav-left {
+      left: 0;
+    }
+
+    &-nav-right {
+      transform: rotate(180deg);
+      right: 0;
+    }
+  }
+
+  &__button {
+    background: $main-color;
+    margin-top: 60px;
+
+    &:hover {
+      background: $main-color-light;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    .wrapper {
+      flex-flow: column;
+      align-items: center;
+    }
+
+    padding: 91px 0 100px;
+
+    &__title {
+      flex: 100%;
+    }
+    &__catalog {
+      // grid-template: 1fr / 1fr 1fr;
+      // column-gap: 40px;
+      width: 510px;
+
+      // &-card:nth-last-child(-n + 2) {
+      //   display: none;
+      // }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    padding: 39px 0;
+
+    &__catalog {
+      padding: 42px 0 114px;
+      // grid-template: 1fr / 1fr;
+      width: 270px;
+      // &-card:nth-last-child(-n + 3) {
+      //   display: none;
+      // }
+      &-nav-left,
+      &-nav-right {
+        top: 79.4%;
+      }
+
+      &-nav-left {
+        left: 19.3%;
+      }
+
+      &-nav-right {
+        transform: rotate(180deg);
+        right: 19.3%;
+      }
+    }
+  }
+}
+
+.card {
+  &-button {
+    margin-bottom: 30px;
+    padding: 13px 42.8px;
+    border: 2px solid $main-color;
+    background: transparent;
+
+    &:hover {
+      background: $main-color;
+    }
+  }
+}

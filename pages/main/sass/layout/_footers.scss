@@ -1,0 +1,92 @@
+.footer {
+  background: url("../../assets/img/noise_transparent@2x.png"),
+    radial-gradient(110.67% 538.64% at 5.73% 50%, #513d2f 0%, #1a1a1c 100%),
+    #211f20;
+
+  .wrapper {
+    padding-top: 40px;
+    column-gap: 159px;
+  }
+
+  &__contacts,
+  &__location {
+    @include flex(flex-start, flex-start, column, nowrap);
+
+    h4 {
+      display: flex;
+      align-items: center;
+      color: $main-color;
+    }
+
+    &-title {
+      color: $color-light-xl;
+    }
+
+    img {
+      margin-right: 20px;
+    }
+  }
+
+  &__contacts {
+    max-width: 279px;
+    padding-top: 17px;
+    flex: 1 0 280px;
+    row-gap: 40px;
+
+    img {
+      width: 40px;
+      height: 32px;
+    }
+  }
+
+  &__location {
+    max-width: 302px;
+    flex: 0 1 302px;
+    padding-top: 17px;
+    row-gap: 32px;
+
+    img {
+      width: 22px;
+      height: 32px;
+    }
+  }
+
+  @media screen and (max-width: 1279px) {
+    .wrapper {
+      padding-top: 10px;
+      column-gap: 60px;
+    }
+
+    &__img {
+      padding-top: 32px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    .wrapper {
+      padding-top: 14px;
+    }
+
+    &__location,
+    &__contacts {
+      &-title {
+        font-size: rem(35);
+        text-align: center;
+      }
+    }
+
+    &__img {
+      padding-top: 46px;
+
+      img {
+        width: 260px;
+      }
+    }
+  }
+
+  @media screen and (max-width: 700px) {
+    &__location {
+      padding-top: 40px;
+    }
+  }
+}

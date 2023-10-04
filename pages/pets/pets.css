@@ -1,0 +1,125 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding: 30.5px 0;
+  min-height: 121px;
+  background: #ffffff;
+}
+.header__logo-title {
+  color: #545454;
+}
+.header__logo-subtitle {
+  color: #292929;
+}
+.header__nav-item__link {
+  color: #545454;
+}
+@media screen and (max-width: 767px) {
+  .header__nav-item__link {
+    color: #fafafa;
+  }
+}
+.header__nav-list {
+  margin: 0 2px 1px 0;
+}
+
+.link-active a {
+  color: #292929;
+}
+@media screen and (max-width: 767px) {
+  .link-active a {
+    color: #fafafa;
+  }
+}
+
+.footer .wrapper {
+  padding-top: 14px;
+}
+
+.pets__title {
+  flex: 100%;
+}
+.pets__catalog {
+  width: 100%;
+  display: grid;
+  padding-bottom: 60px;
+  padding-top: 58px;
+  grid-template: 1fr 1fr/repeat(4, 1fr);
+  gap: 30px 40px;
+}
+.pets__nav {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  column-gap: 20px;
+  flex: 100%;
+}
+.pets__nav-paginator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: row wrap;
+  border-radius: 50%;
+  border: 2px solid #f1cdb3;
+  background: transparent;
+  width: 52px;
+  height: 52px;
+}
+.pets__nav-paginator svg {
+  fill: #292929;
+}
+.pets__nav-paginator:focus, .pets__nav-paginator:active {
+  outline: none;
+}
+.pets__nav-paginator:hover {
+  background: #fddcc4;
+  border: #fddcc4;
+  cursor: pointer;
+}
+.pets__nav-paginator:nth-last-child(-n+2) {
+  transform: rotate(180deg);
+}
+@media screen and (max-width: 1279px) {
+  .pets {
+    padding: 80px 0 78px;
+  }
+  .pets__catalog {
+    width: auto;
+    grid-template: repeat(3, 1fr)/repeat(2, 1fr);
+    padding: 29px 0 38px;
+  }
+}
+@media screen and (max-width: 767px) {
+  .pets {
+    padding: 41px 0 42px;
+  }
+  .pets__catalog {
+    width: auto;
+    grid-template: repeat(3, 1fr)/1fr;
+    padding: 42px 0;
+  }
+  .pets__nav {
+    column-gap: 10px;
+  }
+}
+
+.nav-disabled {
+  border: 2px solid #cdcdcd;
+}
+.nav-disabled svg {
+  fill: #cdcdcd;
+}
+.nav-disabled:hover {
+  background: transparent;
+  border: 2px solid #cdcdcd;
+  cursor: default;
+}
+
+.nav-page {
+  background: #f1cdb3;
+}
+.nav-page:hover {
+  background: #fddcc4;
+  border: #fddcc4;
+}

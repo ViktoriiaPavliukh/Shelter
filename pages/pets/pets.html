@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Pets</title>
+  <link rel="stylesheet" href="../main/main.css">
+  <link rel="stylesheet" href="pets.css">
+</head>
+
+<body>
+  <header class="header">
+    <div class="wrapper">
+      <div class="shadow"></div>
+      <nav class="header__nav">
+        <a href="../main/main.html" class="header__logo">
+          <h1 class="header__logo-title">Cozy House</h1>
+          <span class="header__logo-subtitle">Shelter for pets in Boston</span>
+        </a>
+        <div class="burger">
+          <img src="../../assets/img/Burger.svg" alt="burger menu">
+        </div>
+        <ul class="header__nav-list">
+          <li class="header__nav-item ">
+            <a href="../main/main.html" class="header__nav-item__link  ">About the shelter</a>
+          </li>
+          <li class="header__nav-item link-active">
+            <a href="../pets/pets.html" class="header__nav-item__link active-link">Our pets</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="javascript:void(0);" class="header__nav-item__link">Help the shelter</a>
+          </li>
+          <li class="header__nav-item">
+            <a href="javascript:void(0);" class="header__nav-item__link">Contacts</a>
+          </li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+  <main>
+    <section class="pets">
+      <div class="wrapper flex-center">
+        <h3 class="pets__title">Our friends who</br> are looking for a house</h3>
+        <div class="pets__catalog">
+        </div>
+        <div class="pets__nav">
+          <button class="pets__nav-paginator pets__nav-paginator--first nav-disabled" disabled="disabled"><svg width="27" height="23"
+              viewBox="0 0 25 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.94687 10.7852L0.913671 6.08789V4.98438L9.94687 0.287109V1.625L2.43711 5.53125L9.94687 9.44727V10.7852ZM24.018 10.7852L14.9848 6.08789V4.98438L24.018 0.287109V1.625L16.5082 5.53125L24.018 9.44727V10.7852Z"
+                 />
+            </svg></button>
+          <button class="pets__nav-paginator pets__nav-paginator--prev nav-disabled" disabled="disabled"><svg width="13" height="23"
+              viewBox="0 0 10 11" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.98242 10.7852L0.949219 6.08789V4.98438L9.98242 0.287109V1.625L2.47266 5.53125L9.98242 9.44727V10.7852Z"
+                 />
+            </svg></button>
+          <div class="pets__nav-paginator nav-page">
+            <h4 class="pets__nav-paginator--current">1</h4>
+          </div>
+          <button class="pets__nav-paginator pets__nav-paginator--next"><svg width="13" height="23" viewBox="0 0 10 11" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.98242 10.7852L0.949219 6.08789V4.98438L9.98242 0.287109V1.625L2.47266 5.53125L9.98242 9.44727V10.7852Z"
+                 />
+            </svg></button>
+          <button class="pets__nav-paginator pets__nav-paginator--last"><svg width="27" height="23" viewBox="0 0 25 11" fill="none"
+              xmlns="http://www.w3.org/2000/svg">
+              <path
+                d="M9.94687 10.7852L0.913671 6.08789V4.98438L9.94687 0.287109V1.625L2.43711 5.53125L9.94687 9.44727V10.7852ZM24.018 10.7852L14.9848 6.08789V4.98438L24.018 0.287109V1.625L16.5082 5.53125L24.018 9.44727V10.7852Z"
+                 />
+            </svg> </button>
+        </div>
+        <!-- div pets__nav -->
+      </div>
+    </section>
+  </main>
+  <footer class="footer">
+    <div class="wrapper">
+      <div class="footer__contacts">
+        <h3 class="footer__contacts-title">For questions and suggestions</h3>
+        <a class="footer__contacts-mail" href="mailto:email@shelter.com">
+          <h4><img src="../../assets/img/icon-email.svg" alt="email">email@shelter.com</h4>
+        </a>
+        <a class="footer__contacts-phone" href="tel:+13 674 567 75 54">
+          <h4><img src="../../assets/img/icon-phone.svg" alt="icon-phone">+13 674 567 75 54
+          </h4>
+        </a>
+      </div>
+      <div class="footer__location">
+        <h3 class="footer__location-title">We are waiting for your visit</h3>
+        <a href="https://goo.gl/maps/HBSuHesotCJ2DB9Q8" target="_blank" rel="noopener noreferrer"
+          class="footer__location-boston">
+          <h4><img src="../../assets/img/icon-marker.svg" alt="marker">1 Central Street,
+            Boston (entrance from the store)</h4>
+        </a>
+        <a href="https://goo.gl/maps/jffz6jQBsxopepm39" target="_blank" rel="noopener noreferrer"
+          class="footer__location-london">
+          <h4><img src="../../assets/img/icon-marker.svg" alt="marker">18 South Park,
+            London </h4>
+        </a>
+      </div>
+      <picture class="footer__img"><img src="../../assets/img/footer-puppy.png" alt="Puppy" class="footer__img">
+      </picture>
+    </div>
+  </footer>
+  <div class="popup">
+    <div class="popup__wrapper">
+      <div class="popup__close-button">
+        <img src="../../assets/img/cross.svg" alt="cross">
+      </div>
+      <div class="popup__window">
+       
+      </div>
+    </div>
+  </div>
+  <script src="../main/js/swiper-bundle.min.js"></script>
+  <script src="../main/js/script.js"></script>
+  <script src="../pets/js/pets.js"></script>
+  
+</body>
+
+</html>

@@ -1,0 +1,42 @@
+.header {
+  position: sticky;
+  top: 0;
+  padding: 30.5px 0;
+  min-height: 121px;
+  background: $color-light-xl;
+
+  &__logo {
+    &-title {
+      color: $color-dark-l;
+    }
+
+    &-subtitle {
+      color: $color-dark-3xl;
+    }
+  }
+
+  &__nav {
+    &-item {
+      &__link {
+        color: $color-dark-l;
+
+        @media screen and (max-width: 767px) {
+          color: $color-light-s;
+        }
+      }
+    }
+    &-list {
+      margin: 0 2px 1px 0;
+    }
+  }
+}
+
+.link-active {
+  a {
+    color: $color-dark-3xl;
+
+    @media screen and (max-width: 767px) {
+      color: $color-light-s;
+    }
+  }
+}

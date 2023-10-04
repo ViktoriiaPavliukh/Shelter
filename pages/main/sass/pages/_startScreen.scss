@@ -1,0 +1,74 @@
+.start-screen {
+  background: url("../../assets/img/noise_transparent@2x.png"),
+    radial-gradient(100% 215.42% at 0% 0%, #5b483a 0%, #262425 100%), #211f20;
+  padding-top: 178px;
+
+  &__content {
+    padding-top: 166px;
+    margin-right: 42px;
+    max-width: 460px;
+
+    &-title {
+      color: $color-light-xl;
+      letter-spacing: normal;
+      padding-bottom: 41px;
+      margin-right: 60px;
+    }
+
+    &-text {
+      color: $color-dark-s;
+      // padding-bottom: 41px;
+      padding-bottom: 56px; // change style for tag <a>
+    }
+
+    &-button {
+      background: $main-color;
+
+      &:hover {
+        background: $main-color-light;
+      }
+    }
+  }
+
+  &__img {
+    position: relative;
+    top: 2px;
+  }
+
+  @media screen and (max-width: 1279px) {
+    padding-top: 152px;
+
+    &__content {
+      padding-bottom: 98px;
+      margin-right: 0;
+      padding-top: 0;
+      @include flex(flex-start, flex-start, column);
+
+      &-button {
+        align-self: center;
+      }
+    }
+
+    &__img {
+      padding-left: 139px;
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+    // padding-top: 150px;
+    &__content {
+      text-align: center;
+
+      &-title {
+        font-size: rem(25);
+        letter-spacing: 0.06em;
+        padding-bottom: 43px;
+        margin-right: 0;
+      }
+    }
+
+    &__img {
+      padding: 103px 0 0 40px;
+    }
+  }
+}

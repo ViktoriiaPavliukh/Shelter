@@ -1,0 +1,71 @@
+@import "abstracts/variables";
+@import "abstracts/mixins";
+@import "anime/animation";
+@import "base/reset";
+@import "base/swiper-bundle.min";
+@import "components/buttons";
+@import "components/popup";
+@import "layout/header";
+@import "layout/footers";
+@import "pages/startScreen";
+@import "pages/about";
+@import "pages/pets";
+@import "pages/help";
+@import "pages/donation";
+@import "typography/typography";
+
+.wrapper {
+  display: flex;
+  margin: 0 auto;
+  max-width: 1200px;
+  position: relative;
+
+  @media screen and (max-width: 1279px) {
+    margin: 0 30px;
+  }
+
+  @media screen and (max-width: 768px) {
+    // margin: 0 30px;
+    max-width: 708px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  @media screen and (max-width: 520px) {
+    margin: 0 10px;
+  }
+}
+
+html {
+  font-size: 15px;
+}
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  &.active {
+    overflow: hidden;
+    padding-right: 17px;
+
+    @media screen and (max-width: 768px) {
+      padding-right: 0;
+    }
+  }
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+.flex-center {
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+}
